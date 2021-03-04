@@ -1,0 +1,14 @@
+3. Создайте дамп базы данных example из предыдущего задания, разверните содержимое дампа в новую базу данных sample.
+	1. Открываем консоль(cmd) и переходим в каталог с утилитой mysqldump.exe:
+		> cd 'C:\Program Files\MySQL\MySQL Server 8.0\bin\'
+	2. Пишем в консоле команду:
+		> mysqldump -u root -p example > backup.sql
+	3. Подключаемся к mysql и создаем пустую БД и выходим из интерактивной панели:
+		> mysql
+		mysql > CREATE DATABASE IF NOT EXISTS sample;
+		mysql > exit;
+	4. Разворачиваем содержимое дампа в новую базу данных:
+		> mysql -u root -p sample < backup.sql
+	
+	
+	
